@@ -3,8 +3,6 @@
 
 ## 1. Feature scaling
 The features have very different scales: career totals can be thousands, annual counts are smaller, and indicator variables are 0 or 1. Ridge penalizes coefficient magnitudes, which depend on the measurement units. Without scaling, a large-scale feature needs a smaller coefficient for the same predictive effect and is consequently penalized less. Standardizing makes shrinkage comparable across features.
-For each column j, compute mu_j = mean(X_j) and s_j = sqrt(mean((X_j - mu_j)^2)), then Z_ij = (X_ij - mu_j)/s_j. We use population standard deviations (ddof=0). All scales are positive. Centering is convenient with a free intercept and does not change the model class. The intercept column is added after scaling and is not standardized.
-For the full-data coefficient path and final fit, these statistics use all 263 observations. During cross-validation they are computed using only the training fold, then applied unchanged to validation observations. This avoids leakage. Binary indicators are standardized too, following the instruction to scale all feature variables.
 
 ## 2. Closed-form solution with an unpenalized intercept
 Let A = [1 Z], beta = (b, theta), and D = diag(0, 1, ..., 1). We minimize
