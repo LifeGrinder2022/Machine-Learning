@@ -1,6 +1,5 @@
 # Machine Learning and Optimization — Problem Set 2
 ## Problem 1: Ridge regression and cross-validation
-Source: the supplied MLO_homework2.pdf and hitters.zip. All 263 observations and 19 features are used; no missing or nonfinite values were found. Salaries and coefficients are expressed in thousands of US dollars. The analysis uses NumPy, not a library ridge estimator or cross-validation routine.
 
 ## 1. Feature scaling
 The features have very different scales: career totals can be thousands, annual counts are smaller, and indicator variables are 0 or 1. Ridge penalizes coefficient magnitudes, which depend on the measurement units. Without scaling, a large-scale feature needs a smaller coefficient for the same predictive effect and is consequently penalized less. Standardizing makes shrinkage comparable across features.
