@@ -1,0 +1,16 @@
+{
+  "n": 263,
+  "p": 19,
+  "best_lambda": 2.1544346900318843,
+  "cv_mse": 114713.07789277495,
+  "cv_rmse": 338.6931913882754,
+  "intercept": 535.9258441064638,
+  "small_lambda": 1e-08,
+  "small_lambda_coefficient_difference": 5.256987012831904e-06,
+  "small_lambda_relative_difference": 5.179828322374869e-09,
+  "large_lambda": 1000000000000.0,
+  "large_lambda_slope_norm": 2.0720444749709432e-07,
+  "mean_salary": 535.9258441064637,
+  "grid_small_lambda_difference": 0.5249644876350911,
+  "grid_large_lambda_slope_norm": 0.02071657009370598
+}
