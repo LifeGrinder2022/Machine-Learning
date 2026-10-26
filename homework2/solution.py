@@ -90,6 +90,3 @@ np.savetxt(OUT/'fold_assignment.csv', np.column_stack([np.arange(len(y)),fold_id
 metrics = dict(n=len(y), p=X.shape[1], best_lambda=float(lambdas[best]), cv_mse=float(cv[best]), cv_rmse=float(np.sqrt(cv[best])), intercept=float(beta[0]), small_lambda=1e-8, small_lambda_coefficient_difference=float(np.linalg.norm(small-ols)), small_lambda_relative_difference=float(np.linalg.norm(small-ols)/np.linalg.norm(ols)), large_lambda=1e12, large_lambda_slope_norm=float(np.linalg.norm(large[1:])), mean_salary=float(y.mean()), grid_small_lambda_difference=float(np.linalg.norm(path[0]-ols)), grid_large_lambda_slope_norm=float(norms[-1]))
 (OUT/'metrics.json').write_text(json.dumps(metrics,indent=2)+'\n')
 print(json.dumps(metrics, indent=2))
-print('\nStandardized coefficients:')
-for name, b in zip(names,beta[1:]): print(f'{name:12} {b:12.6f}')
-print('All numerical validation checks passed.')
